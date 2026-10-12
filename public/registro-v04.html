@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#21091f">
+<meta name="robots" content="noindex,nofollow">
+<title>KainaraShop · Registro de clientes v0.4</title>
+<style>
+:root{color-scheme:dark;--bg:#190819;--panel:#2b102d;--line:#71405e;--pink:#ff4ab5;--orange:#ff801d;--cream:#fff6fa;--muted:#e4bed5;--good:#b2f3c8;--bad:#ffc1c5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 0% 0%,#4d1a4d 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#60242a 0,transparent 38%),var(--bg);color:var(--cream);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh}header{border-bottom:1px solid var(--line);background:#240b23d9}header .inner{max-width:1040px;margin:auto;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:20px 22px;flex-wrap:wrap}.brand{font-size:1.7rem;letter-spacing:-.06em;font-weight:900;text-decoration:none;color:inherit}.brand b{color:var(--pink)}.back{font-size:.85rem;border:1px solid var(--line);border-radius:999px;padding:9px 15px;text-decoration:none;color:inherit}main{max-width:1040px;margin:0 auto;padding:54px 22px 72px;display:grid;grid-template-columns:1fr minmax(320px,470px);gap:55px;align-items:start}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--pink);font-size:.76rem;font-weight:800}.intro h1{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.075em;line-height:1.06;margin:18px 0}.intro h1 em{color:var(--orange);font-style:normal}.intro p{color:var(--muted);line-height:1.7;max-width:440px}.step{border-left:3px solid var(--pink);padding:12px 0 12px 17px;margin-top:24px;color:#f5d7e7;line-height:1.5;font-size:.91rem}.box{background:linear-gradient(155deg,#361539,#240c27);border:1px solid var(--line);box-shadow:0 20px 60px #0005;border-radius:20px;padding:26px}.box h2{margin:0 0 8px;font-size:1.65rem;letter-spacing:-.04em}.help{font-size:.86rem;color:var(--muted);line-height:1.55;margin:0 0 20px}.field{margin:0 0 17px}.field label{display:block;font-weight:700;font-size:.87rem;margin-bottom:7px}input{display:block;background:#1b081d;color:#fff;border:1px solid #976488;border-radius:10px;min-height:46px;padding:11px 12px;font:inherit;width:100%}input:focus{outline:2px solid var(--orange);outline-offset:2px}input::placeholder{color:#b987ad}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#451e44;color:white;font:inherit;font-weight:800;border-radius:11px;padding:12px 18px;cursor:pointer;text-align:center}.btn.primary{width:100%;color:#2a1023;background:linear-gradient(96deg,var(--pink),var(--orange));border:0}.btn:disabled{opacity:.5;cursor:not-allowed}.linkbtn{border:none;background:transparent;color:#ffc4e7;cursor:pointer;text-decoration:underline;font:inherit;font-weight:650;padding:8px 0}.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}.status{min-height:28px;font-size:.89rem;color:var(--muted);margin:14px 0 0;line-height:1.5}.status.ok{color:var(--good)}.status.err{color:var(--bad)}.hidden{display:none!important}.pill{display:inline-block;border-radius:999px;border:1px solid #ad708f;background:#4d1d45;padding:8px 12px;font-weight:750;font-size:.81rem}.pill.ok{border-color:#499b76;background:#194032;color:var(--good)}.pill.wait{border-color:#b67844;background:#4b2a17;color:#ffe1b3}.small{font-size:.8rem;color:var(--muted);line-height:1.55}.account-line{overflow-wrap:anywhere;font-size:.82rem;color:var(--muted)}.check-line{padding:14px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}footer{color:var(--muted);text-align:center;padding:18px;font-size:.8rem}@media(max-width:800px){main{grid-template-columns:1fr;gap:20px;padding-top:34px}.intro h1{font-size:2.65rem}.intro p{max-width:none}.box{padding:21px}}@media(max-width:460px){.cols{grid-template-columns:1fr}main{padding-left:14px;padding-right:14px}}
+</style>
+</head>
+<body>
+<header><div class="inner"><a class="brand" href="/">Kainara<b>Shop</b></a><a class="back" href="/catalogo-v03.html">← Volver al catálogo</a></div></header>
+<main>
+<section class="intro"><span class="eyebrow">KainaraShop · Área de clientes</span><h1>Creaciones únicas.<br><em>Acceso personal.</em></h1><p>Regístrate para solicitar acceso a nuestros precios. Revisamos las solicitudes antes de activar el acceso: crear una cuenta no lo concede automáticamente.</p><div class="step"><strong>1.</strong> Crea tu cuenta.<br><strong>2.</strong> Verifica tu correo electrónico.<br><strong>3.</strong> Espera la aprobación de KainaraShop.</div><p class="small">Versión de pruebas v0.4. Los precios se habilitarán en el catálogo en una fase posterior y solo para cuentas autorizadas.</p></section>
+<div>
+<section id="loading" class="box"><h2>Conectando…</h2><p class="help">Preparando el acceso seguro a Firebase.</p></section>
+<section id="anonymous" class="box hidden"><div class="bar" style="margin:0 0 16px"><button id="showSignup" class="btn" type="button">Crear cuenta</button><button id="showLogin" class="btn" type="button">Ya tengo cuenta</button></div>
+<div id="signupView"><h2>Solicitar acceso</h2><p class="help">Tus datos se usan para identificar y gestionar tu solicitud.</p><form id="signupForm"><div class="cols"><div class="field"><label for="firstName">Nombre</label><input id="firstName" autocomplete="given-name" maxlength="100" minlength="2" required></div><div class="field"><label for="lastName">Apellidos</label><input id="lastName" autocomplete="family-name" maxlength="140" minlength="2" required></div></div><div class="field"><label for="registerEmail">Correo electrónico</label><input id="registerEmail" type="email" maxlength="254" autocomplete="email" required></div><div class="field"><label for="registerPassword">Contraseña (mínimo 8 caracteres)</label><input id="registerPassword" type="password" minlength="8" autocomplete="new-password" required></div><button class="btn primary" id="registerBtn" type="submit">Crear cuenta y solicitar aprobación</button></form></div>
+<div id="loginView" class="hidden"><h2>Entrar</h2><p class="help">Consulta el estado de tu solicitud de acceso.</p><form id="loginForm"><div class="field"><label for="loginEmail">Correo electrónico</label><input id="loginEmail" type="email" autocomplete="username" required></div><div class="field"><label for="loginPassword">Contraseña</label><input id="loginPassword" type="password" autocomplete="current-password" required></div><button class="btn primary" id="loginBtn" type="submit">Iniciar sesión</button></form><button class="linkbtn" id="resetBtn" type="button">He olvidado mi contraseña</button></div>
+<p id="authStatus" role="status" aria-live="polite" class="status"></p></section>
+<section id="completeProfile" class="box hidden"><span class="eyebrow">Completar solicitud</span><h2>Falta tu perfil</h2><p class="help">Tu cuenta de acceso existe, pero aún no tenemos el registro de solicitud. Completa estos datos para continuar.</p><form id="profileForm"><div class="cols"><div class="field"><label for="profileName">Nombre</label><input id="profileName" minlength="2" maxlength="100" required></div><div class="field"><label for="profileSurname">Apellidos</label><input id="profileSurname" minlength="2" maxlength="140" required></div></div><button class="btn primary" id="profileBtn" type="submit">Completar solicitud</button></form><p id="profileStatus" class="status" role="status" aria-live="polite"></p><div class="actions"><button id="logoutProfile" class="btn" type="button">Cerrar sesión</button></div></section>
+<section id="accountView" class="box hidden"><span class="eyebrow">Tu cuenta KainaraShop</span><h2>Estado de solicitud</h2><p class="account-line" id="accountEmail"></p><div class="check-line"><span>Verificación del correo</span><span id="emailState" class="pill wait">Sin verificar</span></div><div class="check-line"><span>Aprobación de KainaraShop</span><span id="approvalState" class="pill wait">Pendiente</span></div><p class="help" style="margin:20px 0" id="accountHelp">Estamos revisando tu solicitud.</p><div class="actions"><button id="refreshBtn" type="button" class="btn">Actualizar estado</button><button id="verifyBtn" type="button" class="btn">Reenviar verificación</button><button id="logoutBtn" type="button" class="btn">Cerrar sesión</button></div><p id="accountStatus" class="status" role="status" aria-live="polite"></p></section>
+</div>
+</main>
+<footer>KainaraShop · Acceso de clientes · v0.4 de pruebas</footer>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+import { getAuth, setPersistence, inMemoryPersistence, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
+import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js';
+const config={apiKey:'AIzaSyDv5G9PLE4tXigaNbLiJDEskG_lGfmtxQI',authDomain:'kainara-e55b7.firebaseapp.com',projectId:'kainara-e55b7',storageBucket:'kainara-e55b7.firebasestorage.app',messagingSenderId:'365630210399',appId:'1:365630210399:web:3d03d2708c56bb266936ea'};
+// Instancia de autenticación independiente. No cambia la sesión persistente del panel ADMIN.
+const app=initializeApp(config,'kainara-registro-v04');
+const auth=getAuth(app),db=getFirestore(app);
+const $=id=>document.getElementById(id);
+const areas=['loading','anonymous','completeProfile','accountView'];
+let operation=false;
+function show(id){for(const area of areas)$(area).classList.toggle('hidden',area!==id)}
+function status(id,msg,type=''){$(id).textContent=msg;$(id).className='status '+type}
+function errorText(err){const code=err?.code||'';const lookup={ 'auth/email-already-in-use':'Ese correo ya está registrado. Utiliza «Ya tengo cuenta».','auth/invalid-email':'Comprueba la dirección de correo.','auth/weak-password':'La contraseña no es suficientemente segura.','auth/invalid-credential':'Correo o contraseña incorrectos.','auth/too-many-requests':'Demasiados intentos. Espera unos minutos.','auth/network-request-failed':'No hay conexión con Firebase.','permission-denied':'No tienes permiso para completar esta acción. Comprueba si están publicadas las reglas v0.4.'};return lookup[code]||'No se pudo completar la operación ('+(code||'error de conexión')+').'}
+function busyState(active){operation=active;for(const id of ['registerBtn','loginBtn','profileBtn','refreshBtn','verifyBtn','resetBtn','logoutBtn','logoutProfile'])$(id).disabled=active}
+async function displayAccount(user){
+  try{
+    const result=await getDoc(doc(db,'clientes',user.uid));
+    if(!auth.currentUser||auth.currentUser.uid!==user.uid)return;
+    if(!result.exists()){show('completeProfile');return}
+    const customer=result.data();show('accountView');$('accountEmail').textContent=user.email||'';
+    $('emailState').textContent=user.emailVerified?'Verificado':'Sin verificar';$('emailState').className='pill '+(user.emailVerified?'ok':'wait');
+    const approved=customer.estado==='aprobado';const rejected=customer.estado==='rechazado';
+    $('approvalState').textContent=approved?'Aprobado':rejected?'Rechazado':'Pendiente';$('approvalState').className='pill '+(approved?'ok':'wait');
+    $('accountHelp').textContent=rejected?'Tu solicitud no ha sido aprobada. Contacta con KainaraShop si necesitas información.':approved&&!user.emailVerified?'Tu cuenta está aprobada, pero debes verificar tu correo para acceder a los precios.':approved?'Cuenta aprobada y correo verificado. La visualización de precios se incorporará al catálogo después de las pruebas.':'Tu solicitud está pendiente de revisión por el administrador.';
+    $('verifyBtn').classList.toggle('hidden',user.emailVerified);
+  }catch(e){show('completeProfile');status('profileStatus','No se pudo comprobar el perfil: '+errorText(e),'err')}
+}
+$('showSignup').onclick=()=>{$('signupView').classList.remove('hidden');$('loginView').classList.add('hidden');status('authStatus','')};
+$('showLogin').onclick=()=>{$('loginView').classList.remove('hidden');$('signupView').classList.add('hidden');status('authStatus','')};
+$('signupForm').addEventListener('submit',async e=>{
+  e.preventDefault();if(operation)return;busyState(true);status('authStatus','Creando cuenta…');
+  const nombre=$('firstName').value.trim(),apellidos=$('lastName').value.trim(),email=$('registerEmail').value.trim().toLowerCase(),pass=$('registerPassword').value;
+  if(nombre.length<2||apellidos.length<2){status('authStatus','Introduce nombre y apellidos válidos.','err');busyState(false);return}
+  try{
+    const result=await createUserWithEmailAndPassword(auth,email,pass);
+    $('registerPassword').value='';
+    // Se guarda un perfil pendiente. El cliente jamás decide su aprobación.
+    await setDoc(doc(db,'clientes',result.user.uid),{nombre,apellidos,email:result.user.email,estado:'pendiente',creadoEn:serverTimestamp()});
+    try{await sendEmailVerification(result.user);status('accountStatus','Cuenta creada. Te hemos enviado un mensaje para verificar el correo.','ok')}catch(err){status('accountStatus','Solicitud guardada. No se pudo enviar el correo de verificación; usa «Reenviar verificación».','err')}
+    await displayAccount(result.user);
+  }catch(err){if(auth.currentUser){show('completeProfile');$('profileName').value=nombre;$('profileSurname').value=apellidos;status('profileStatus','La cuenta existe, pero faltan datos de la solicitud: '+errorText(err),'err')}else status('authStatus',errorText(err),'err')}
+  finally{busyState(false)}
+});
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();if(operation)return;busyState(true);status('authStatus','Entrando…');try{await signInWithEmailAndPassword(auth,$('loginEmail').value.trim(),$('loginPassword').value);$('loginPassword').value=''}catch(err){status('authStatus',errorText(err),'err')}finally{busyState(false)}});
+$('profileForm').addEventListener('submit',async e=>{e.preventDefault();if(operation||!auth.currentUser)return;busyState(true);try{const user=auth.currentUser;await setDoc(doc(db,'clientes',user.uid),{nombre:$('profileName').value.trim(),apellidos:$('profileSurname').value.trim(),email:user.email,estado:'pendiente',creadoEn:serverTimestamp()});if(!user.emailVerified){try{await sendEmailVerification(user)}catch(e){/* Puede solicitar un nuevo envío después. */}}await displayAccount(user);status('accountStatus','Solicitud guardada correctamente.','ok')}catch(err){status('profileStatus',errorText(err),'err')}finally{busyState(false)}});
+$('resetBtn').onclick=async()=>{if(operation)return;const email=$('loginEmail').value.trim();if(!email){status('authStatus','Introduce primero tu correo electrónico.','err');return}busyState(true);try{await sendPasswordResetEmail(auth,email);status('authStatus','Si el correo está registrado, recibirás instrucciones para restablecer tu contraseña.','ok')}catch(err){status('authStatus',errorText(err),'err')}finally{busyState(false)}};
+$('refreshBtn').onclick=async()=>{if(!auth.currentUser||operation)return;busyState(true);try{await auth.currentUser.reload();await auth.currentUser.getIdToken(true);await displayAccount(auth.currentUser);status('accountStatus','Estado actualizado.','ok')}catch(err){status('accountStatus',errorText(err),'err')}finally{busyState(false)}};
+$('verifyBtn').onclick=async()=>{if(!auth.currentUser||operation)return;busyState(true);try{await sendEmailVerification(auth.currentUser);status('accountStatus','Hemos enviado un nuevo correo de verificación.','ok')}catch(err){status('accountStatus',errorText(err),'err')}finally{busyState(false)}};
+async function logout(){await signOut(auth);status('authStatus','Sesión cerrada.','ok')}
+$('logoutBtn').onclick=logout;$('logoutProfile').onclick=logout;
+setPersistence(auth,inMemoryPersistence).then(()=>onAuthStateChanged(auth,user=>{if(user)displayAccount(user);else show('anonymous')})).catch(e=>{show('anonymous');status('authStatus',errorText(e),'err')});
+</script>
+</body>
+</html>
