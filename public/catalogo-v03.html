@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#21091f">
+  <meta name="description" content="KainaraShop: catálogo de ropa, joyas, hogar, lámparas, empresas y rallye. Pedidos por WhatsApp.">
+  <title>KainaraShop · Catálogo en vivo</title>
+  <style>
+    :root{color-scheme:dark;--plum:#21091f;--dark:#150414;--card:#2e1030;--orange:#ff7717;--pink:#ff49b4;--rose:#fa2477;--red:#ef1c4e;--cream:#fff7f7;--muted:#d7b6cf;--border:#7b375d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 12%,#4b1744 0%,transparent 46%),radial-gradient(ellipse at 88% 75%,#391025 0%,transparent 38%),var(--dark);color:var(--cream);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;min-width:320px}
+    button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:4px}button:disabled{cursor:not-allowed;opacity:.65}
+    .top{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:23px 25px;position:relative;z-index:3}
+    .brand{display:flex;align-items:center;gap:13px;font-size:clamp(1.28rem,2.6vw,1.8rem);font-weight:900;letter-spacing:-1.5px}.brand-mark{width:45px;height:45px;display:grid;place-items:center;background:#381033;border:2px solid var(--orange);border-radius:15px;box-shadow:0 0 22px #ff771748;color:#fff;font-size:27px;font-weight:1000}.brand span:last-child b{color:var(--pink)}
+    .top-right{display:flex;align-items:center;gap:10px}.chip-btn{border:1px solid var(--border);background:#381334;color:#fff;border-radius:999px;padding:11px 16px;font-size:.86rem;font-weight:700;transition:.2s}.chip-btn:hover{border-color:var(--pink);background:#4d1747}.wa-top{border-color:#4caf86}.wa-top span{margin-right:5px}
+    main{overflow:hidden}.hero{position:relative;isolation:isolate;margin:12px auto 0;max-width:1200px;border:2px solid #8b3362;border-radius:30px;overflow:hidden;min-height:355px;display:flex;align-items:center;background:linear-gradient(120deg,#330931 0%,#4c103d 48%,#380b32 100%);box-shadow:0 25px 90px #0007}
+    .hero:before{content:"";position:absolute;inset:0 0 0 53%;z-index:-1;background:repeating-linear-gradient(125deg,transparent 0 26px,#f52d861e 26px 50px,#ef244458 50px 64px,transparent 64px 95px);transform:skewX(-9deg) scale(1.3);transform-origin:center}.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:6%;top:-50px;border:55px solid #ff4baa33;filter:drop-shadow(0 0 24px #ff42864a);z-index:-1}
+    .hero-inner{padding:55px clamp(24px,5vw,75px);max-width:750px}.kicker{text-transform:uppercase;letter-spacing:.23em;font-size:.76rem;font-weight:800;color:#ffadcf}.hero h1{font-size:clamp(2.9rem,5.5vw,5.4rem);line-height:.97;letter-spacing:-.07em;margin:16px 0 22px;font-weight:950}.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--pink),#ff9536);color:transparent;background-clip:text}.hero p{max-width:480px;color:#f7d9ec;font-size:1.05rem;margin-bottom:28px}.btn-primary{background:linear-gradient(95deg,#ff48a8,#fa3d77);color:#fff;border:0;border-radius:13px;padding:14px 20px;font-weight:850;box-shadow:0 8px 25px #ef21744b}.btn-primary:hover{filter:brightness(1.15)}.btn-outline{background:#3a0b2f;color:#fff;border:2px solid var(--orange);border-radius:13px;padding:12px 18px;font-weight:850}.btn-outline:hover{background:#561337}
+    .wrap{max-width:1210px;margin:auto;padding:0 25px}.eyebrow{color:var(--pink);font-weight:800;font-size:.77rem;letter-spacing:.2em;text-transform:uppercase}.section-head{margin:55px 0 16px;display:flex;justify-content:space-between;align-items:end;gap:15px}.section-head h2{font-size:clamp(1.7rem,3.5vw,2.5rem);letter-spacing:-.05em;margin:4px 0 0}.hint{color:var(--muted);font-size:.88rem}.categories{border-top:1px solid #713059;border-bottom:1px solid #713059;margin-top:17px;padding:23px 0}.category-wheel{display:flex;justify-content:center;align-items:center;gap:clamp(9px,2vw,25px);min-height:164px;touch-action:pan-y}.arrow{width:49px;height:49px;border-radius:50%;background:#3b1338;color:#fff;border:2px solid var(--orange);font-size:29px;display:grid;place-items:center;flex-shrink:0;box-shadow:0 0 20px #ff78174a}.arrow:hover{background:#6d1b42}.active-cat{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;min-width:180px;text-align:center}.active-cat .symbol{width:91px;height:91px;border-radius:24px;background:radial-gradient(circle at 28% 20%,#64305d,#31082e);border:2px solid var(--orange);display:grid;place-items:center;font-size:46px;box-shadow:0 0 30px #ef2d8872,inset 0 0 20px #f67b3140}.active-cat strong{font-size:1.22rem}.side-cat{width:154px;text-align:center;color:#e2bed8;opacity:.5;display:flex;flex-direction:column;align-items:center;gap:5px}.side-cat .symbol{font-size:32px;filter:grayscale(.5)}.side-cat span:last-child{font-size:.87rem}.section-note{color:#d9b3d0;font-size:.92rem;margin:16px 0}
+    .catalog-info{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}.catalog-info h3{font-size:1.32rem;margin:0}.catalog-info p{margin:4px 0 0;color:var(--muted);font-size:.87rem}.demo-pill{display:inline-flex;border:1px solid #a65a78;border-radius:999px;padding:5px 11px;color:#ffc3d7;font-size:.72rem;font-weight:800;white-space:nowrap}
+    .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;min-height:330px}.product{background:linear-gradient(150deg,#3e173d,#29102a);border:1px solid #763957;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 35px #0004}.visual{height:225px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 40% 35%,#8b395e,#471541 50%,#270d2e 100%)}.visual:before{content:"";position:absolute;width:160px;height:160px;border:1px solid #ffab7f49;border-radius:50%;box-shadow:0 0 0 30px #ff52a511,0 0 0 70px #ff52a50b}.visual .emoji{position:relative;font-size:85px;filter:drop-shadow(0 12px 18px #0008)}.visual .tag{position:absolute;top:13px;left:14px;background:#310b2b;border:1px solid #ff7717b0;padding:5px 10px;border-radius:999px;font-size:.68rem;font-weight:800;letter-spacing:.1em}.product-body{padding:19px 18px 18px;display:flex;flex:1;flex-direction:column;gap:10px}.product h4{font-size:1.15rem;margin:0}.product p{font-size:.83rem;color:#e1c6db;margin:0}.price{font-weight:800;color:#ffb45b;margin-top:auto;min-height:24px}.product-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:5px}.small-btn{border-radius:10px;padding:11px 7px;font-size:.8rem;font-weight:800;border:1px solid var(--orange);color:#fff;background:transparent}.small-btn:hover{background:#562041}.small-btn.order{border:0;background:var(--pink);color:#21091f}.small-btn.order:hover{filter:brightness(1.13)}
+    .bottom{margin-top:63px;background:linear-gradient(130deg,#420d3c,#260a25);border-top:2px solid #d95c68;padding:38px 20px;text-align:center}.bottom b{color:#ff7da6}.bottom p{font-size:.84rem;color:#d4b6ca}.bottom a{text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:4px}
+    dialog{border:2px solid var(--orange);border-radius:23px;background:#320d32;color:#fff;width:min(calc(100% - 28px),470px);padding:0;box-shadow:0 15px 110px #000b}dialog::backdrop{background:#11020fc9;backdrop-filter:blur(5px)}.modal{padding:29px}.modal-top{display:flex;justify-content:space-between;align-items:start;gap:14px}.modal-top h2{font-size:1.7rem;margin:6px 0 12px}.close{color:#fff;border:1px solid #915879;background:#4e1944;border-radius:50%;width:38px;height:38px;font-size:23px}.modal p{color:#ebcbdc;margin:0 0 22px;font-size:.92rem}.field{margin-bottom:15px}.field label{display:block;font-weight:700;margin-bottom:6px;font-size:.9rem}.field input{background:#1a071b;color:#fff;border:1px solid #9c547d;border-radius:10px;padding:13px;width:100%;outline-offset:2px}.field input::placeholder{color:#9d8b9a}.modal-actions{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:7px;margin-top:23px}.modal-actions button{border:0;border-radius:10px;padding:11px 5px;font-weight:850;font-size:.82rem}.modal-actions .pink{background:#f741b6;color:#2c0926}.modal-actions .orange{background:var(--orange);color:#29101c}.modal-actions .pink-light{background:#fcb2dd;color:#301023}.modal-notice{font-size:.76rem;color:#ceafc8;margin-top:17px}.status{font-size:.81rem;color:#ffc273;min-height:20px;margin-top:10px}
+    @media(max-width:760px){.top{padding:17px 17px}.brand{font-size:1.34rem}.brand-mark{width:39px;height:39px}.top-right .wa-top{display:none}.chip-btn{padding:9px 12px;font-size:.78rem}.hero{margin:6px 12px 0;border-radius:21px;min-height:390px}.hero:before{inset:20% -28% -20% 45%;opacity:.8}.hero-inner{padding:40px 26px}.hero h1{font-size:3.35rem}.wrap{padding:0 16px}.section-head{margin-top:41px}.side-cat{display:none}.category-wheel{min-height:155px}.active-cat{min-width:150px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.visual{height:175px}.product-body{padding:13px}.product-actions{grid-template-columns:1fr}.catalog-info{align-items:start}.product h4{font-size:1rem}}
+    @media(max-width:470px){.products{grid-template-columns:1fr}.visual{height:215px}.product-actions{grid-template-columns:1fr 1fr}.hero h1{font-size:2.95rem}.active-cat .symbol{width:81px;height:81px}.arrow{width:44px;height:44px}.modal-actions{grid-template-columns:1fr}.section-head .hint{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#inicio" aria-label="KainaraShop, volver al inicio"><span class="brand-mark" aria-hidden="true">K</span><span>Kainara<b>Shop</b></span></a>
+    <div class="top-right"><a id="whatsapp-top" class="chip-btn wa-top" target="_blank" rel="noopener noreferrer" href="https://wa.me/34684488255?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20KainaraShop"><span aria-hidden="true">✦</span> WhatsApp</a><button id="account-button" class="chip-btn" type="button">Ver precios</button></div>
+  </header>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner"><span class="kicker">Bienvenidos a KainaraShop</span><h1 id="hero-title">Ideas con<br><em>personalidad.</em></h1><p>Descubre nuestras colecciones de ropa, joyas, hogar, lámparas, empresas y rallye.</p><a href="#catalogo" class="btn-primary">Explorar catálogo ↗</a></div>
+    </section>
+    <section class="wrap" id="catalogo" aria-labelledby="categories-title">
+      <div class="section-head"><div><span class="eyebrow">Nuestras colecciones</span><h2 id="categories-title">Elige tu categoría</h2></div><span class="hint">Usa las flechas para navegar</span></div>
+      <div class="categories">
+        <div class="category-wheel" aria-label="Selector de categorías">
+          <button class="arrow" id="prev-category" type="button" aria-label="Categoría anterior">‹</button>
+          <div class="side-cat" aria-hidden="true"><span class="symbol" id="previous-symbol">🏁</span><span id="previous-label">Rallye</span></div>
+          <div class="active-cat" aria-live="polite" aria-atomic="true"><span class="symbol" id="category-symbol" aria-hidden="true">👗</span><strong id="category-name">Ropa</strong></div>
+          <div class="side-cat" aria-hidden="true"><span class="symbol" id="next-symbol">💎</span><span id="next-label">Joyas</span></div>
+          <button class="arrow" id="next-category" type="button" aria-label="Siguiente categoría">›</button>
+        </div>
+      </div>
+      <p class="section-note">Colecciones separadas, sin barras de categorías: cambia con las flechas o deslizando en el móvil.</p>
+      <div class="catalog-info"><div><h3 id="products-heading">Ropa</h3><p>Artículos publicados por KainaraShop</p></div><span class="demo-pill" id="catalog-status" role="status" aria-live="polite">CARGANDO CATÁLOGO...</span></div>
+      <div class="products" id="products" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="bottom"><strong>Kainara<b>Shop</b></strong><p>Tu catálogo, a un mensaje de distancia.</p><p>Consultas y encargos por <a target="_blank" rel="noopener noreferrer" href="https://wa.me/34684488255?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20KainaraShop">WhatsApp</a>.</p><p>Productos conectados a Firebase. Los precios están protegidos y las solicitudes se realizan mediante WhatsApp.</p></footer>
+  <dialog id="register-dialog" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-top"><div><span class="eyebrow">Precios y pedidos</span><h2 id="modal-title">Información de precios</h2></div><button class="close" type="button" id="close-dialog" aria-label="Cerrar">×</button></div>
+      <p>Los precios privados no están disponibles para visitantes. Estamos preparando el acceso verificado para clientes de KainaraShop.</p>
+      <p>Mientras tanto, puedes consultar el precio y la personalización de cualquier artículo por WhatsApp, indicando su referencia.</p>
+      <div class="modal-actions"><button class="pink" id="cancel-register" type="button">Cerrar</button><button class="orange" id="help-whatsapp" type="button">Consultar por WhatsApp</button></div>
+    </div>
+  </dialog>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+    import { getFirestore, collection, query, where, onSnapshot } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js';
+
+    const app = initializeApp({
+      apiKey: 'AIzaSyDv5G9PLE4tXigaNbLiJDEskG_lGfmtxQI',
+      authDomain: 'kainara-e55b7.firebaseapp.com',
+      projectId: 'kainara-e55b7',
+      storageBucket: 'kainara-e55b7.firebasestorage.app',
+      messagingSenderId: '365630210399',
+      appId: '1:365630210399:web:3d03d2708c56bb266936ea'
+    });
+    const db = getFirestore(app);
+    const WHATSAPP = '34684488255';
+    const categories = [
+      {name:'Ropa', symbol:'👗'},
+      {name:'Joyas', symbol:'💎'},
+      {name:'Hogar', symbol:'🏠'},
+      {name:'Lámparas', symbol:'💡'},
+      {name:'Empresas', symbol:'🏢'},
+      {name:'Rallye', symbol:'🏁'}
+    ];
+    const el = id => document.getElementById(id);
+    const modal = el('register-dialog');
+    const wa = message => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
+    let currentCategory = 0;
+    let items = [];
+    let loadState = 'loading';
+    function openExternal(url){window.open(url,'_blank','noopener,noreferrer');}
+    function elWithText(tag, name, content){
+      const node=document.createElement(tag);
+      if(name)node.className=name;
+      if(content!==undefined)node.textContent=content;
+      return node;
+    }
+    function render(){
+      const len=categories.length;
+      const current=categories[currentCategory],prev=categories[(currentCategory-1+len)%len],next=categories[(currentCategory+1)%len];
+      el('category-name').textContent=current.name;el('category-symbol').textContent=current.symbol;
+      el('previous-label').textContent=prev.name;el('previous-symbol').textContent=prev.symbol;
+      el('next-label').textContent=next.name;el('next-symbol').textContent=next.symbol;
+      el('products-heading').textContent=current.name;
+      el('account-button').textContent='Acceso a precios';
+      el('catalog-status').textContent=loadState==='loading'?'CARGANDO CATÁLOGO':loadState==='error'?'ERROR DE CONEXIÓN':'CATÁLOGO EN VIVO';
+      const grid=el('products');grid.replaceChildren();
+      if(loadState!=='ready'){
+        grid.append(elWithText('div','product-body',loadState==='error'?'No ha sido posible cargar los productos. Comprueba tu conexión y vuelve a intentarlo.':'Consultando los productos publicados…'));
+        return;
+      }
+      const filtered=items.filter(p=>p.categoria===current.name).sort((a,b)=>(Number(a.orden)||0)-(Number(b.orden)||0)||a.nombre.localeCompare(b.nombre,'es'));
+      if(!filtered.length){grid.append(elWithText('div','product-body','Todavía no hay artículos publicados en esta categoría.'));return;}
+      for(const p of filtered){
+        const card=elWithText('article','product');
+        const visual=elWithText('div','visual');
+        if(typeof p.imagenUrl==='string'&&p.imagenUrl.startsWith('https://')){
+          const img=document.createElement('img');img.src=p.imagenUrl;img.loading='lazy';img.alt='Fotografía de '+p.nombre;img.referrerPolicy='no-referrer';
+          img.style.cssText='width:100%;height:100%;object-fit:cover;position:relative;z-index:1;';
+          img.onerror=()=>img.replaceWith(elWithText('span','emoji',current.symbol));
+          visual.append(img);
+        }else{visual.append(elWithText('span','emoji',current.symbol));}
+        const tag=elWithText('span','tag',p.disponible?'DISPONIBLE':'CONSULTAR');tag.style.zIndex='2';visual.append(tag);
+        const body=elWithText('div','product-body');
+        body.append(elWithText('h4','',p.nombre),elWithText('p','',p.descripcion||'Consulta los detalles de esta creación.'));
+        body.append(elWithText('div','price','🔒 Precio privado · Consultar'));
+        const actions=elWithText('div','product-actions');
+        const see=elWithText('button','small-btn','Consultar precio');see.type='button';
+        see.addEventListener('click',()=>openExternal(wa(`Hola, quisiera consultar el precio de ${p.nombre} (ref. ${p.sku||p.id}) de KainaraShop.`)));
+        const order=elWithText('button','small-btn order',p.disponible?'Pedir por WhatsApp':'Consultar');order.type='button';
+        order.addEventListener('click',()=>openExternal(wa(`Hola, me interesa ${p.nombre} (ref. ${p.sku||p.id}) de la categoría ${current.name}. ¿Podéis darme información y disponibilidad?`)));
+        actions.append(see,order);body.append(actions);card.append(visual,body);grid.append(card);
+      }
+    }
+    function changeCategory(direction){currentCategory=(currentCategory+direction+categories.length)%categories.length;render();}
+    el('prev-category').addEventListener('click',()=>changeCategory(-1));
+    el('next-category').addEventListener('click',()=>changeCategory(1));
+    el('account-button').addEventListener('click',()=>modal.showModal());
+    el('close-dialog').addEventListener('click',()=>modal.close());
+    el('cancel-register').addEventListener('click',()=>modal.close());
+    el('help-whatsapp').addEventListener('click',()=>openExternal(wa('Hola, quisiera saber cómo consultar los precios de KainaraShop.')));
+    let touchStartX=null;
+    const wheel=document.querySelector('.category-wheel');
+    wheel.addEventListener('touchstart',e=>{if(e.touches.length===1)touchStartX=e.touches[0].clientX},{passive:true});
+    wheel.addEventListener('touchend',e=>{if(touchStartX===null)return;const dx=e.changedTouches[0].clientX-touchStartX;touchStartX=null;if(Math.abs(dx)>45)changeCategory(dx<0?1:-1)},{passive:true});
+    wheel.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();changeCategory(-1)}if(e.key==='ArrowRight'){e.preventDefault();changeCategory(1)}});
+    render();
+    // Solo se solicitan productos publicados: las reglas v0.3 deniegan los borradores.
+    onSnapshot(query(collection(db,'catalogo'),where('publicado','==',true)),snapshot=>{
+      items=snapshot.docs.map(d=>({id:d.id,...d.data()})).filter(p=>typeof p.nombre==='string'&&p.publicado===true);
+      loadState='ready';render();
+    },error=>{console.error('Error al cargar catálogo:',error.code||error.message);loadState='error';render();});
+  </script>
+</body>
+</html>
